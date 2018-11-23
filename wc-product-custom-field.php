@@ -26,6 +26,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /**
+ * Enable support for plugin localization and internationalization.
+ */
+function dorzki_register_plugin_i18n() {
+
+	load_plugin_textdomain( 'dorzki-wc-product-custom-field', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+
+}
+
+add_action( 'plugins_loaded', 'dorzki_register_plugin_i18n' );
+
+
+/**
  * Checks if WooCommerce is installed and activated.
  *
  * @return bool
@@ -53,7 +65,7 @@ add_action( 'plugins_loaded', 'dorzki_check_required_plugins' );
 function dorzki_display_woocommerce_notice() {
 
 	$notice = sprintf(
-	/* translators: 1: WooCommerce 2: Plugin Name */
+		/* translators: 1: WooCommerce 2: Plugin Name */
 		esc_html__( '"%1$s" is required to be installed and activated order to use "%2$s".', 'dorzki-wc-product-custom-field' ),
 		'<strong> ' . esc_html__( 'WooCommerce', 'dorzki-wc-product-custom-field' ) . '</strong>',
 		'<strong>' . esc_html__( 'WooCommerce Product Custom Field', 'dorzki-wc-product-custom-field' ) . '</strong>'
@@ -62,15 +74,3 @@ function dorzki_display_woocommerce_notice() {
 	echo "<div class='notice notice-error'><p>{$notice}</p></div>";
 
 }
-
-
-/**
- * Enable support for plugin localization and internationalization.
- */
-function dorzki_register_plugin_i18n() {
-
-	load_plugin_textdomain( 'dorzki-wc-product-custom-field', false, basename( dirname( __FILE__ ) ) . '/languages/' );
-
-}
-
-add_action( 'plugins_loaded', 'dorzki_register_plugin_i18n' );
