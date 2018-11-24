@@ -40,7 +40,7 @@ class Plugin {
 	 *
 	 * @var string
 	 */
-	public static $field_id = '_wc_custom_field';
+	public static $field_id = 'dorzki_wc_custom_field';
 
 
 	/* ------------------------------------------ */
@@ -204,7 +204,7 @@ class Plugin {
 	 *
 	 * @return string
 	 */
-	public function show_on_admin_order( $display_key ) {
+	public function show_on_overview( $display_key ) {
 
 		return ( self::$field_id === $display_key ) ? __( 'Your Name', 'dorzki-wc-product-custom-field' ) : $display_key;
 
