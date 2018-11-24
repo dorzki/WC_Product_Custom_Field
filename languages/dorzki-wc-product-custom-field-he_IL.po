@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Product Custom Field\n"
-"POT-Creation-Date: 2018-11-23 11:16+0200\n"
-"PO-Revision-Date: 2018-11-23 11:16+0200\n"
+"POT-Creation-Date: 2018-11-23 12:36+0200\n"
+"PO-Revision-Date: 2018-11-23 12:37+0200\n"
 "Last-Translator: Dor Zuberi <webmaster@dorzki.co.il>\n"
 "Language-Team: Dor Zuberi <webmaster@dorzki.co.il>\n"
 "Language: he_IL\n"
@@ -22,19 +22,33 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: class-plugin.php:69
+msgid "Your Name:"
+msgstr "השם שלך:"
+
+#. translators: 1: Product Name
+#: class-plugin.php:95
+#, php-format
+msgid "\"%1$s\" can't be added to cart until you fill all data."
+msgstr "אין אפשרות להוסיף \"%1$s\" לעגלת הקניות עד שתמלא את כל הנתונים."
+
+#: class-plugin.php:164
+msgid "Your Name"
+msgstr "השם שלך"
+
 #. translators: 1: WooCommerce 2: Plugin Name
-#: wc-product-custom-field.php:57
+#: wc-product-custom-field.php:69
 #, php-format
 msgid ""
 "\"%1$s\" is required to be installed and activated order to use \"%2$s\"."
 msgstr "“%1$s” נדרש להיום מותקן ומופעל על מנת להשתמש בתוסף “%2$s”."
 
-#: wc-product-custom-field.php:58
+#: wc-product-custom-field.php:70
 msgid "WooCommerce"
 msgstr "ווקומרס"
 
 #. Plugin Name of the plugin/theme
-#: wc-product-custom-field.php:59
+#: wc-product-custom-field.php:71
 msgid "WooCommerce Product Custom Field"
 msgstr "ווקומרס ‫-‬ שדה מוצר מיוחד"
 
